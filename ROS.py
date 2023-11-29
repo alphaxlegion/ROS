@@ -209,7 +209,7 @@ def wafDetector(domain):
     """
     Get WAFs list in a file
     """
-    r = requests.get("https://raw.githubusercontent.com/D3Ext/AORT/main/utils/wafsign.json")
+    r = requests.get("https://raw.githubusercontent.com/alphaxlegion/ROS/main/wafsign.json")
     f = open('wafsign.json', 'w')
     f.write(r.text)
     f.close()
@@ -449,7 +449,7 @@ def wayback(domain):
     # Check if redirects.json parameters file exists
     if os.path.exists("redirects.json") == False:
         redirects_file_exists = 0
-        r = requests.get("https://raw.githubusercontent.com/D3Ext/AORT/main/utils/redirects.json")
+        r = requests.get("https://raw.githubusercontent.com/alphaxlegion/ROS/main/redirects.json")
         redirects_file = open("redirects.json", "w")
         redirects_file.write(r.text)
         redirects_file.close()
@@ -480,7 +480,7 @@ def wayback(domain):
     xss_file_exists = 1
     if os.path.exists("xss.json") == False:
         xss_file_exists = 0
-        r = requests.get("https://raw.githubusercontent.com/D3Ext/AORT/main/utils/xss.json")
+        r = requests.get("https://raw.githubusercontent.com/alphaxlegion/ROS/main/xss.json")
         xss_file = open("xss.json", "w")
         xss_file.write(r.text)
         xss_file.close()
